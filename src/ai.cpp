@@ -26,5 +26,6 @@ Point input(int x, int y) {
         y = rand() % 19;
     } while (board[x][y] != 0);
 
+    board[x][y] = 1;
     return { x, y };
 }
