@@ -13,13 +13,9 @@ void init(int color) {
 }
 
 Point input(int x, int y) {
-    if (x == -1 || y == -1) {
-        // 가장 첫 수를 중앙에 둔다.
-        board[9][9] = 1;
-        return { 9, 9 };
+    if (x != -1 && y != -1) {
+        board[x][y] = 2;
     }
-
-    board[x][y] = 2;
 
     do {
         x = rand() % 19;
