@@ -1,5 +1,6 @@
 #include "ai.hpp"
 #include <cmath>
+#include <ctime>
 
 // 1: 흑돌, 2: 백돌
 int myColor;
@@ -10,6 +11,7 @@ int board[19][19];
 void init(int color) {
     // 프로그램 초기화 코드를 작성한다.
     myColor = color;
+    srand(time(NULL));
 }
 
 Point input(int x, int y) {
