@@ -4,6 +4,7 @@
 
 // 1: 흑돌, 2: 백돌
 int myColor;
+int lastPos = -1;
 
 // 0: 빈공간, 1: 내가 둔 돌, 2: 상대방이 둔 돌
 int board[19][19];
@@ -20,8 +21,9 @@ Point input(int x, int y) {
     }
 
     do {
-        x = rand() % 19;
-        y = rand() % 19;
+        lastPos++;
+        x = lastPos % 19;
+        y = lastPos / 19;
     } while (board[x][y] != 0);
 
     board[x][y] = 1;
